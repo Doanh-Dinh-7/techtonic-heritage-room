@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import { CanvasContainer } from './components/3d/CanvasContainer';
 import { LoadingScreen } from './components/ui/LoadingScreen';
 import { HUD } from './components/ui/HUD';
@@ -54,6 +55,9 @@ export const App: React.FC = () => {
 
       {/* 5. Mandatory Loading Screen with Progress and Entry Button */}
       <LoadingScreen onEnter={handleEnter} />
+
+      {/* 6. Vercel Web Analytics */}
+      <Analytics />
     </main>
   );
 };
